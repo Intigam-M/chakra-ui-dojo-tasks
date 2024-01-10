@@ -16,16 +16,17 @@ import {
       <Box maxW="480px">
         <Form method="post" action="/create">
           <FormControl isRequired mb="40px">
-            <FormLabel>Task name:</FormLabel>
-            <Input type="text" name="title" />
+            <FormLabel color={'GrayText'}>Task name:</FormLabel>
+            <Input type="text" name="title" borderColor={'GrayText'}/>
             <FormHelperText>Enter a descriptive task name.</FormHelperText>
           </FormControl>
   
           <FormControl mb="40px">
-            <FormLabel>Task description:</FormLabel>
+            <FormLabel color={'GrayText'}>Task description:</FormLabel>
             <Textarea 
               placeholder="Enter a detailed description for your task..." 
               name="description"
+              borderColor={'GrayText'}
             />
           </FormControl>
   
@@ -34,8 +35,9 @@ import {
               name="isPriority" 
               colorScheme="purple"
               size="lg"
+              borderColor={'GrayText'}
             />
-            <FormLabel mb="0" ml="10px">Make a priority task</FormLabel>
+            <FormLabel color={'GrayText'} mb="0" ml="10px">Make a priority task</FormLabel>
           </FormControl>
   
           <Button type="submit">submit</Button>

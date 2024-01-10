@@ -1,5 +1,5 @@
-{
-  "tasks": [
+
+ export const tasks = [
     {
        "id":1,
        "title":"Fix the navbar",
@@ -71,4 +71,3 @@
        "img": "/img/yoshi.png"
     }
  ]
-}
