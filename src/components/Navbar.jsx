@@ -25,7 +25,7 @@ export default function Navbar() {
             <Text fontSize="xs" color="white">3</Text>
           </AvatarBadge>
         </Avatar>
-        <Text color="GrayText">mario@netninja.dev</Text>
+        <Text>mario@netninja.dev</Text>
         <Button 
           colorScheme="purple"
           onClick={() => toast({

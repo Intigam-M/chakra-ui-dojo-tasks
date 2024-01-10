@@ -15,15 +15,19 @@ import {
   Avatar
 } from "@chakra-ui/react"
 import { tasks} from "../data/db"
+import { useColorModeValue } from "@chakra-ui/color-mode"
 
 export default function Dashboard() {
+    const cardTopBorderColor = useColorModeValue("purple.400", "purple.600");
+    const cardBGColor = useColorModeValue("white", "gray.700");
+    const dividerColor = useColorModeValue("gray.300", "gray.400");
 
   return (
     <SimpleGrid spacing={10} minChildWidth={300}>
       {tasks && tasks.map(task => (
-        <Card key={task.id} borderTop="8px" borderColor="purple.400" bg="white">
+        <Card key={task.id} borderTop="8px" borderColor={cardTopBorderColor} bg={cardBGColor}>
 
-          <CardHeader color="gray.700">
+          <CardHeader>
             <Flex gap={5}>
               <Box w="50px" h="50px">
               <Avatar name={task.author} src={task.img} />
@@ -35,11 +39,11 @@ export default function Dashboard() {
             </Flex>
           </CardHeader>
 
-          <CardBody color="gray.500">
+          <CardBody>
             <Text>{task.description}</Text>
           </CardBody>
 
-          <Divider borderColor="gray.200" />
+          <Divider borderColor={dividerColor} />
 
           <CardFooter>
             <HStack>

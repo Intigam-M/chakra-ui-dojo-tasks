@@ -1,11 +1,13 @@
 import { List, ListItem, ListIcon } from "@chakra-ui/react"
 import { CalendarIcon, EditIcon, AtSignIcon } from '@chakra-ui/icons'
 import { NavLink } from "react-router-dom"
+import ColorModeSwitch from "./ColorModeSwitch"
 
 
 export default function Sidebar() {
   return (
     <List color="white" fontSize="1.2em" spacing={4}>
+    <ColorModeSwitch />
       <ListItem>
         <NavLink to="/">
           <ListIcon as={CalendarIcon} color="white" />
